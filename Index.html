@@ -1,11 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SoftGym</title>
+    <link rel="stylesheet" href="Estilos/Index.css">
+    <link rel="icon" href="/imagenes/Imagen2.PNG">
+    <link rel="stylesheet" href="Java/java.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
+    <script>
+        let docTitle = document.title;
+        window.addEventListener("blur", () => {
+            document.title = "Regresa 😥";
+        })
+        window.addEventListener("focus", () => {
+            document.title = docTitle;
+        })
+    </script>
+
+    <header>
+        <div class="navbar">
+            <a class="logo" href="IInicio.html">
+                <img src="imagenes/Imagen2.PNG" alt="Logo"></img>
+            </a>
+
+            <br /> <br /> <br />
+
+            <ul class="links">
+                <a href="IInicio.HTML" class="nav-link">Inicio</a>
+                <a href="Quienessomos.HTML" class="nav-link">Quienes Somos</a>
+                <a href="PLANES.HTML" class="nav-link">Nuestros Planes</a>
+                <a href="buzon.html" class="nav-link">Contactanos</a>
+                <a href="Login1.html" class="nav-link login-btn">Ingresa</a>
+            </ul>
+
+            <div class="toggle_btn">
+                <i class="fas fa-bars" style="color: #2d3543;"></i>
+            </div>
+
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="IInicio.HTML" class="nav-link">Inicio</a></li>
+            <li><a href="Quienessomos.HTML" class="nav-link">Quienes Somos</a></li>
+            <li><a href="PLANES.HTML" class="nav-link">Nuestros Planes</a></li>
+            <li><a href="buzon.html" class="nav-link">Contactanos</a></li>
+            <li><a href="Login1.html" class="nav-link login-btn">INGRESAR</a></li>
+        </div>
+    </header>
+    <script src="../java/BOTON RESPONSIVE.js"></script>
+
+    <script>
+        //botones 
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropDownmenu = document.querySelector('.dropdown_menu');
+
+        toggleBtn.addEventListener('click', function (isopen) {
+            dropDownmenu.classList.toggle('show');
+            isopen = dropDownmenu.classList.contains('show');
+            toggleBtnIcon.classList = isopen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars';
+        });
+    </script>
+
+    <nav>
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1" />
+                <input type="radio" name="radio-btn" id="radio2" />
+                <input type="radio" name="radio-btn" id="radio3" />
+                <input type="radio" name="radio-btn" id="radio4" />
+
+                <!-- Imagenes -->
+
+                <div class="slide first">
+                    <img src="imagenes/slider/images.jpg" alt="" />
+
+                </div>
+                <div class="slide">
+                    <img src="imagenes/slider/slider.jpg" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="imagenes/slider/slider1.jpg" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="imagenes/slider/slider2.jpg" alt="" />
+                </div>
+                <!-- Automatización Auto -->
+                <div class="navegation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+            </div>
+
+            <!-- Navegación Manual -->
+            <div class="navegation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        </div>
+
+        <script>
+            // slider
+
+            var counter = 1;
+            setInterval(function () {
+
+                document.getElementById('radio' + counter).checked = true;
+                counter++;
+                if (counter > 4) {
+                    counter = 1;
+                }
+            }, 5000);
+        </script>
+    </nav>
+
+
+    <dfiv class="subtitulo">
+        <h2> Elige tu plan y empieza a entrenar.</h2>
+        </div>
+        <div class="contenedor">
+            <div class="tablas">
+                <h2>El gym más barato</h2>
+                <img src="imagenes/PLANES/bolsa-de-dinero.png" alt="">
+
+            </div>
+            <div class="tablas">
+                <h2>Sin Permanencia</h2>
+                <img src="imagenes/PLANES/prohibido.png" alt="">
+
+            </div>
+            <div class="tablas">
+                <h2>0% en cuota de inscripción</h2>
+                <img src="imagenes/PLANES/euro.png" alt="">
+
+            </div>
+            <div class="tablas">
+                <h2>Más de 300 maquinas de ultima tecnologia</h2>
+                <img src="imagenes/PLANES/abdominales.png" alt="">
+
+            </div>
+
+        </div>
+        </div>
+
+        <footer class="pie-pagina">
+            <div class="grupo-1">
+                <div class="box">
+                    <figure>
+                        <h:outputLink>
+                            <img src="imagenes/Imagen2.PNG" alt="Logo"></img>
+                        </h:outputLink>
+                    </figure>
+                </div>
+                <div class="box">
+                    <h2>CONTACTANOS</h2>
+                    <p> Telefonos: +57 301 - 291 - 9286 (Llamadas) <br> +57 310 - 678 - 4586 (Whatsapp) </p>
+                    <p> Correos electrónicos: servicio@recibosa.org <br> recoleccion@recibosa.org </p>
+                    <p> Dirección: cra 80h # 19 - 70 Sur Bogotá D.C - Colombia </p>
+
+                </div>
+                <div class="box">
+                    <h2>SIGUENOS</h2>
+                    <div class="red-social">
+                        <a href="https://www.facebook.com/profile.php?id=100083171830684" class="fa fa-facebook"
+                            target="_blank"></a>
+                        <a href="https://www.tiktok.com/@recibosa?" class="fa-brands fa-tiktok" target="_blank"></a>
+                        <a href="https://www.instagram.com/recibosa/" class="fa fa-instagram" target="_blank"></a>
+                        <a href="https://www.linkedin.com/in/comercializadora-dise%C3%B1o-ambiental-9a54572b0"
+                            class="fa-brands fa-linkedin" target="_blank"></a>
+                    </div>
+                    <h2>__________________________</h2>
+                    <h2>Contactanos</h2>
+                    <div class="red-social">
+                        <a href="https://www.facebook.com/profile.php?id=100083171830684" class="fa fa-facebook"
+                            target="_blank"></a>
+                        <a href="https://www.tiktok.com/@recibosa?" class="fa-brands fa-tiktok" target="_blank"></a>
+                        <a href="https://www.instagram.com/recibosa/" class="fa fa-instagram" target="_blank"></a>
+                        <a href="https://www.linkedin.com/in/comercializadora-dise%C3%B1o-ambiental-9a54572b0"
+                            class="fa-brands fa-linkedin" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="grupo-2">
+                <small>&copy; 2024 <b>SoftGym</b> - Todos los derechos reservados.</small>
+            </div>
+        </footer>
+
 </body>
+
 </html>
